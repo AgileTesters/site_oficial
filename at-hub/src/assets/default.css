@@ -1,0 +1,188 @@
+.container {
+    margin: inherit !important;
+}
+
+.menu_link, .menu_link a, .menu_link a:visited {
+    width: 52px;
+    height: 25px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding: 10px;
+  }
+
+
+  /* HERO */
+
+.hero_vector {
+    width: 1440px;
+    height: 687px;
+    border: solid 0 #000000;
+    background-image: url('./site_hero_blue.png');
+    padding: 40px 10px 40px 10px;
+}
+
+
+.hero_text {
+    padding-top: 200px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;  
+}
+.hero_title {
+    font-family: Roboto;
+    font-size: 44px;
+    font-weight: 900; 
+}
+
+
+/*  ISSUES  */
+
+.issues {
+    width: 1440px;
+    border: solid 0 #000000;
+    padding: 40px 10px 40px 80px;
+}
+
+.section_title {
+    width: 1440px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #222222;
+}
+
+.github_issue_box {
+    width: 600px;
+    height: 120px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #ebebeb;
+    background-color: #ffffff;
+    margin: 13px;
+    float: left;
+    padding-top: 15px;
+  }
+
+  .github_issue_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #222222;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+
+  .github_issue_subtitle {
+    width: 283.5px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+    margin-left: 11px;
+  }
+
+  .issues_link a, .issues a:hover, .issues a:visited {
+      text-decoration: none;
+  }
+
+  .github_arrow_col{
+    padding-top: 18px;
+    padding-left: 0px !important;
+  }
+
+  .vermais_link, .vermais_link a, .vermais_link a:hover, .vermais_link:visited  {
+    width: 64px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ed5d3a;
+  }
+
+  /*  ARTICLES */
+
+  .base-artigo {
+    width: 1440px;
+    background-color: #f3f4f5 !important;
+    margin-top: 30px;
+  }
+
+
+  .article_box {
+    margin: 38px;
+    float: left;
+}
+
+  .article_author {
+    font-family: Roboto;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    width: 128px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #222222;  
+  }
+
+  .article_title {
+    width: 283.5px;
+    height: 57px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #222222;
+  }
+
+  .article_thumbnail{
+    width: 370px;
+    height: 175px;  
+  }
+
+
+.footer {
+    width: 1440px;
+    background-color: #222222;
+  }
+
+.footer_icons {
+    font-size: 40px;
+    color: #ebebeb;
+    padding: 10px;
+}
