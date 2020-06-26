@@ -17,7 +17,7 @@
 
     .issues {
         border: solid 0 #000000;
-        padding: 10px;
+        padding: 0px;
     }
 
     .github_arrow_col{
@@ -76,18 +76,26 @@
     .footer {
         background-color: #222222;
       }
+
+      .newsletter_col {
+        background-color: #ebebeb;
+        padding: 30px;
+        border: 1px solid white;
+        min-width: 100% !important;
+        height: auto;
+      }
+
+      .placeholder_div{
+        display: none;
+      }
 }
 
 @media (min-width: 601px) {
     .hero_vector {
-        background-image: url('./site_hero_blue.png');
+        background-image: url('./hero_7.png');
         height: 687px;
         width: 1440px;
         padding: 40px 10px 40px 10px;
-    }
-
-    .hero_text {
-        padding-top: 150px;
     }
 
     .hero_img{
@@ -158,6 +166,13 @@
         width: 1440px;
         background-color: #222222;
       }    
+
+    .newsletter_col {
+      background-color: #ebebeb;
+      height: 300px;
+      padding: 77px;
+      border: 1px solid white;
+    }
 
 }
 
@@ -302,4 +317,23 @@
     font-size: 40px;
     color: #ebebeb;
     padding: 10px;
+}
+
+    
+.footer {
+  text-align: center;
+}    
+
+
+.newsletter_ button{
+  width: 224px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #ed5d3a;
+}
+.assinar_newsletter {
+  border-radius: 5px;
+  background-color: #ed5d3a;
+  color: white;
+  padding: 10px 40px 10px 40px;
 }

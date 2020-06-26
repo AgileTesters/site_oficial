@@ -5,8 +5,6 @@
         <b-col>
             <b-navbar toggleable="lg" type="light">
             <b-navbar-brand href="#"><img src="@/assets/at_transparente.png" width="200"/></b-navbar-brand>
-
-
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav center>
@@ -15,28 +13,7 @@
                 <b-nav-item href="#vagas">vagas</b-nav-item>
                 <b-nav-item href="#podcast">podcast</b-nav-item>
                 <b-nav-item href="#artigos">artigos</b-nav-item>
-                <b-nav-item href="#canal">canal</b-nav-item>
-                <b-nav-item href="#">mais</b-nav-item>
-              </b-navbar-nav>
-
-              <!-- Right aligned nav items -->
-              <b-navbar-nav class="ml-auto">
-
-                <b-nav-item-dropdown text="Lang" right>
-                  <b-dropdown-item href="#">EN</b-dropdown-item>
-                  <b-dropdown-item href="#">ES</b-dropdown-item>
-                  <b-dropdown-item href="#">RU</b-dropdown-item>
-                  <b-dropdown-item href="#">FA</b-dropdown-item>
-                </b-nav-item-dropdown>
-
-                <b-nav-item-dropdown right>
-                  <!-- Using 'button-content' slot -->
-                  <template v-slot:button-content>
-                    <em>User</em>
-                  </template>
-                  <b-dropdown-item href="#">Profile</b-dropdown-item>
-                  <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-                </b-nav-item-dropdown>
+                <b-nav-item href="#canal">canal</b-nav-item>                        
               </b-navbar-nav>
             </b-collapse>
           </b-navbar>
@@ -61,7 +38,7 @@
         <b-col>
           <h1 id="forum">Fórum </h1>
           <div class="github_issue_box" v-for="post of forum" v-bind:key="post.id">
-            <a v-bind:href=post.html_url>
+            <a target="_blank" v-bind:href=post.html_url>
             <b-row>
               <b-col>
                 <h2 class='github_issue_title'> {{post.title}} </h2>
@@ -83,7 +60,7 @@
         <b-col>
           <h1 id="vagas"> Vagas </h1>
           <div  class="github_issue_box" v-for="vaga of vagas" v-bind:key="vaga.id">
-            <a class="issues_link" v-bind:href=vaga.html_url>
+            <a class="issues_link" target="_blank" v-bind:href=vaga.html_url>
             <b-row>
               <b-col>
                 <h2 class='github_issue_title'> {{vaga.title}} </h2>
@@ -113,7 +90,7 @@
           <br>
           <iframe src="https://anchor.fm/qansei/embed" height="160px" frameborder="0" scrolling="no" class="podcast_widget"></iframe>
           <br>
-            <b-button variant="success" style="margin-top: 16px;"> <i class="fab fa-spotify"></i> Ouça também no spotify! </b-button>          
+          <a class="btn btn-success" target="_blank" href="https://open.spotify.com/show/6C86lhNUZ6Pf4nYROy8ciI?si=RRlb_9VdT_eSvOtdXfuTwQ" role="button" style="margin-top: 16px;"><i class="fab fa-spotify"></i> Ouça também no spotify!</a>
         </b-col>
         </center>
       </b-row>
@@ -122,14 +99,14 @@
         <center style='width: 100%'>
         <b-col>
            <h1 id="artigos">Nossos Artigos </h1>
-          <h5> Artigos da comunidade agiletesters.com.br em parceria com a revista AssertQA() sobre qualidade de software, desenvolvimento e cultura</h5>
+          <h5> Artigos da nossa revista <a target="_blank" href="#"> AssertQA() </a> sobre qualidade de software, desenvolvimento e cultura</h5>
         </b-col>
         </center>
         <div class="w-100"></div>
         <div v-for="article of articles" v-bind:key="article.link">
           <b-col>
             <div class="article_box">
-                  <a v-bind:href=article.link>
+                  <a target="_blank" v-bind:href=article.link>
                     <img v-bind:src=article.thumbnail class="article_thumbnail">
                     <br>
                     <span class='article_author'>{{article.author}}</span>
@@ -155,11 +132,56 @@
         </b-col>
         </center>
       </b-row>
-    
+
+      <b-row class="issues" style='padding-left: 0px;'>
+        <b-col lg="1" class="placeholder_div">
+        </b-col>
+        <b-col class="newsletter_col">
+          <h2> Esteja sempre atualizado! <i class="fad fa-newspaper"></i></h2>
+          <form action="https://www.getrevue.co/profile/agile-testers/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+
+            <b-row class="my-1">
+              <b-col sm="3">
+                <label for="member_email">Email*</label>
+              </b-col>
+              <b-col sm="6">
+            <b-form-input name="member[email]" id="member_email" :state="null" placeholder="Obrigatório"></b-form-input>
+              </b-col>
+            </b-row>
+
+            <b-row class="my-1">
+              <b-col sm="3">
+                <label for="member_email">Nome*</label>
+              </b-col>
+              <b-col sm="6">
+                <b-form-input name="member[first_name]" id="member_first_name" :state="null" placeholder="Não obrigatório"></b-form-input>
+              </b-col>
+            </b-row>
+            <input type="submit" class="btn btn-primary" value="Assinar" name="member[subscribe]" id="member_submit">
+
+          </form>
+
+        </b-col>
+          <b-col class="newsletter_col">
+            <br>
+            <h1> Pergunte-me qualquer coisa! <i class="fad fa-question-square"></i> </h1>
+            
+            <br/>
+            <a class="btn btn-primary" target="_blank" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeLMETwSFN-pmVNgL_hbWPmDtLMZR2lXtg9MVAhKS73LVPlaA/viewform" 
+              role="button"> Faça sua pergunta pra gente!
+            </a>
+
+          </b-col>
+        <b-col lg="1" class="placeholder_div">
+        </b-col>
+      </b-row>    
     
     <b-row class="footer">
         <b-col>
-          <i class="fab fa-github-alt footer_icons"></i>  <i class="fab fa-facebook-square footer_icons"></i> <i class="fab fa-twitter-square footer_icons"></i>
+          <a target="_blank" href="https://github.com/AgileTesters/"> <i class="fab fa-github-alt footer_icons"></i> </a> 
+          <a target="_blank" href="https://www.facebook.com/agiletesters"> <i class="fab fa-facebook-square footer_icons"></i> </a>
+          <a target="_blank" href="https://twitter.com/agile_testers/"> <i class="fab fa-twitter-square footer_icons"></i> </a>
         </b-col>
     </b-row>
 
