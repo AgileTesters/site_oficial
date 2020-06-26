@@ -2,27 +2,57 @@
   <div id="app">
     <b-container>
       <b-row class="hero_vector">
-        <b-col lg="6">
-          <span>
-            <img src="@/assets/at_transparente.png" width="200"/>
-          </span>
+        <b-col>
+            <b-navbar toggleable="lg" type="light">
+            <b-navbar-brand href="#"><img src="@/assets/at_transparente.png" width="200"/></b-navbar-brand>
+
+
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+            <b-collapse id="nav-collapse" is-nav center>
+              <b-navbar-nav>
+                <b-nav-item href="#forum">fórum</b-nav-item>
+                <b-nav-item href="#vagas">vagas</b-nav-item>
+                <b-nav-item href="#podcast">podcast</b-nav-item>
+                <b-nav-item href="#artigos">artigos</b-nav-item>
+                <b-nav-item href="#canal">canal</b-nav-item>
+                <b-nav-item href="#">mais</b-nav-item>
+              </b-navbar-nav>
+
+              <!-- Right aligned nav items -->
+              <b-navbar-nav class="ml-auto">
+
+                <b-nav-item-dropdown text="Lang" right>
+                  <b-dropdown-item href="#">EN</b-dropdown-item>
+                  <b-dropdown-item href="#">ES</b-dropdown-item>
+                  <b-dropdown-item href="#">RU</b-dropdown-item>
+                  <b-dropdown-item href="#">FA</b-dropdown-item>
+                </b-nav-item-dropdown>
+
+                <b-nav-item-dropdown right>
+                  <!-- Using 'button-content' slot -->
+                  <template v-slot:button-content>
+                    <em>User</em>
+                  </template>
+                  <b-dropdown-item href="#">Profile</b-dropdown-item>
+                  <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+                </b-nav-item-dropdown>
+              </b-navbar-nav>
+            </b-collapse>
+          </b-navbar>
+
+        </b-col>
+        <div class="w-100"></div>
+
+        <b-col lg="6" sm="6">
           <div class=hero_text>
             <h1 class='hero_title'>print("Hello Bacon")</h1>
-            <span class='hero_sub_title'>Pig short ribs turducken ham hock capicola filet mignon. 
-               Hamburger beef ribs doner cow prosciutto. <br>
-               Shank tenderloin t-bone, spare ribs chuck leberkas shankle meatball ham hock frankfurter venison.
-               Sirloin pastrami cow beef hamburger. </span>
+            <span class='hero_sub_title'>A sua comunidade de teste está de cara nova!
+                </span>
           </div>
         </b-col>
-        <b-col lg="4">
-          <div class='menu_links'>
-            <span> <a class="menu_link" href="#forum">fórum</a></span> 
-            <span> <a class="menu_link" href="#vagas">vagas</a></span> 
-            <span> <a class="menu_link" href="#podcast">podcast</a></span> 
-            <span> <a class="menu_link" href="#artigos">artigos</a></span>
-            <span> <a class="menu_link" href="#canal">canal</a></span> 
-            <span> <a class="menu_link" href="">mais</a></span> 
-          </div>
+        <b-col lg="6" sm="6">
+          <img class="hero_img" src="@/assets/agile_testers_mari_waldo.png"/>
         </b-col>
       </b-row>
     </b-container>
@@ -48,7 +78,6 @@
         </b-col>
         <div class="w-100"></div>
         <b-col><a target="_blank" class="vermais_link" href="https://github.com/AgileTesters/forum"> Ver mais </a></b-col>
-        
       </b-row>
       <b-row class="issues">
         <b-col>
@@ -77,16 +106,14 @@
         <center style='width: 100%'>
         <b-col>
            <h1 id="podcast">Nosso Podcast </h1>
-          <h5> Podcast da comunidade agiletesters.com.br sobre qualidade de software, desenvolvimento e cultura</h5>
+          <h5> Podcast do Agile Testers - Para sugerir temas e participantes, <a href="">clique aqui</a></h5>
         </b-col>
         <div class="w-100"></div>
         <b-col>
           <br>
-          <iframe src="https://anchor.fm/qansei/embed" height="160px" width=1024 frameborder="0" scrolling="no" class="margin-bottom:100px"></iframe>
+          <iframe src="https://anchor.fm/qansei/embed" height="160px" frameborder="0" scrolling="no" class="podcast_widget"></iframe>
           <br>
-            <b-button variant="success" style="margin-top: 16px;"> <i class="fab fa-spotify"></i> Ouça também no spotify! </b-button>
-
-          
+            <b-button variant="success" style="margin-top: 16px;"> <i class="fab fa-spotify"></i> Ouça também no spotify! </b-button>          
         </b-col>
         </center>
       </b-row>
@@ -122,20 +149,21 @@
         <div class="w-100"></div>
         <b-col>
           <br>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUhHLl66ov4h2hmL_G3hHi3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="canal_iframe" src="https://www.youtube.com/embed/videoseries?list=UUhHLl66ov4h2hmL_G3hHi3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <br>
           <b-button variant="principal" style="margin-top: 16px;"> <i class="fab fa-youtube"></i> Se inscreva em nosso canal! </b-button>
         </b-col>
         </center>
       </b-row>
+    
+    
+    <b-row class="footer">
+        <b-col>
+          <i class="fab fa-github-alt footer_icons"></i>  <i class="fab fa-facebook-square footer_icons"></i> <i class="fab fa-twitter-square footer_icons"></i>
+        </b-col>
+    </b-row>
+
     </b-container>
-  <div class="w-100 footer">
-    <center>
-      <i class="fab fa-github-alt footer_icons"></i>  <i class="fab fa-facebook-square footer_icons"></i> <i class="fab fa-twitter-square footer_icons"></i>
-    </center>
-
-  </div>
-
   </div>
 </template>
 
