@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <b-container>
-      <b-row class="hero_vector">
+    <b-container-fluid>
+      <b-row class="hero_vector" align-h='center'>
         <b-col>
             <b-navbar toggleable="lg" type="light">
             <b-navbar-brand href="#"><img src="@/assets/at_transparente.png" width="200"/></b-navbar-brand>
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-navbar-toggle target="nav-collapse">
+                  <i class="far fa-angle-double-down" style="color: white"></i>
+            </b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav center>
               <b-navbar-nav>
@@ -32,9 +34,7 @@
           <img class="hero_img" src="@/assets/agile_testers_mari_waldo.png"/>
         </b-col>
       </b-row>
-    </b-container>
-    <b-container>
-      <b-row class="issues">
+      <b-row class="issues" align-h='center'>
         <b-col>
           <h1 id="forum">Fórum </h1>
           <div class="github_issue_box" v-for="post of forum" v-bind:key="post.id">
@@ -56,7 +56,7 @@
         <div class="w-100"></div>
         <b-col><a target="_blank" class="vermais_link" href="https://github.com/AgileTesters/forum"> Ver mais </a></b-col>
       </b-row>
-      <b-row class="issues">
+      <b-row class="issues" align-h='center'>
         <b-col>
           <h1 id="vagas"> Vagas </h1>
           <div  class="github_issue_box" v-for="vaga of vagas" v-bind:key="vaga.id">
@@ -79,7 +79,7 @@
         <b-col><a target="_blank" class="vermais_link" href="https://github.com/qa-brasil/vagas"> Ver mais </a></b-col>
       </b-row>
 
-      <b-row class="issues" style='padding-left: 0px;'>
+      <b-row class="issues" style='padding-left: 0px;' align-h='center'>
         <center style='width: 100%'>
         <b-col>
            <h1 id="podcast">Nosso Podcast </h1>
@@ -185,7 +185,7 @@
         </b-col>
     </b-row>
 
-    </b-container>
+    </b-container-fluid>
   </div>
 </template>
 

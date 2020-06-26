@@ -12,7 +12,7 @@
     }
 
     .hero_img{
-        width: 335px;
+        width: 290px;
     }
 
     .issues {
@@ -26,7 +26,7 @@
 
     .github_issue_box {
         height: 130px;
-        margin: 13px;
+        margin: 10px 0PX 20px 5px;
         float: left;
         padding-top: 15px;
         width: 100%;
@@ -92,10 +92,12 @@
 
 @media (min-width: 601px) {
     .hero_vector {
-        background-image: url('./hero_7.png');
+        background-image: url('./at_hero_blue.png');
         height: 687px;
-        width: 1440px;
         padding: 40px 10px 40px 10px;
+        background-repeat: no-repeat;
+        background-color: #20215a;
+
     }
 
     .hero_img{
@@ -107,7 +109,6 @@
     }
 
     .issues {
-        width: 1440px;
         border: solid 0 #000000;
         padding: 40px 10px 40px 80px;
     }
@@ -139,10 +140,6 @@
         height: 160px;
       }
 
-      .base-artigo {
-        width: 1440px;
-      }
-
       .article_box {
         margin: 38px 38px 0px 38px;
         float: left;
@@ -163,7 +160,6 @@
     }
     
     .footer {
-        width: 1440px;
         background-color: #222222;
       }    
 
@@ -216,7 +212,6 @@
 
 
 .section_title {
-    width: 1440px;
     font-family: Roboto;
     font-size: 34px;
     font-weight: 900;
