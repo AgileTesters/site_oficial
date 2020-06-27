@@ -2,13 +2,20 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 600px) {
+h1{
+  padding-top: 30px;
+}
+
+@media (max-width: 800px) {
     .hero_vector {
         background-image: linear-gradient(to top, #2a63bc, #010f66);
         padding: 40px 10px 0px 10px;
+        align-items: center;
+        text-align: center;
     }
     .hero_text {
-        padding-top: 100px;
+        padding-top: 50px;
+        padding-left: 10px;
     }
 
     .hero_img{
@@ -57,7 +64,6 @@ body{
         width: 94%;
         height: 120px;
         padding: 5px;
-        padding-left: 14px;
     }
 
     .article_box {
@@ -93,10 +99,19 @@ body{
       .subtitle{
         margin-left:0px;
       }
+      
+      .input_mobile {
+        margin-left: 15px;
+        margin-bottom: 24px;
+      }
+
+      .artigo{
+        padding-left: 25px;
+      }
   
 }
 
-@media (min-width: 601px) {
+@media (min-width: 801px) {
     .hero_vector {
         background-image: url(./at_hero_blue.png),  linear-gradient(90deg, #2b63bc 13%, #20215a 10%);
         height: 687px;
@@ -125,7 +140,7 @@ body{
     .github_issue_box {
         width: 500px;
         height: 120px;
-        margin: 13px;
+        margin: 13px 30px 17px 0px;
         float: left;
         padding-top: 15px;
       }
@@ -183,10 +198,6 @@ body{
       padding-top: 300px;
       padding-left: 10%;
       width: 40%;
-    }
-
-    .artigo{
-      padding-left: 28px; padding-top: 15px;
     }
 
 }
@@ -282,7 +293,7 @@ body{
     line-height: normal;
     letter-spacing: normal;
     color: #ed5d3a;
-    padding-left: 30px;
+    padding-left: 18px;
   }
 
   /*  ARTICLES */

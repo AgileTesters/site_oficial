@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="hero_vector">
-      <nav class="navbar navbar-expand-sm" style="padding-left: 5%;">
+      <nav class="navbar navbar-expand-lg" style="padding-left: 5%;">
         <span class="navbar-brand"><img src="@/assets/at_transparente.png" width="200"/></span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <i class="far fa-angle-double-down" style="color: white"></i>
@@ -9,19 +9,19 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">fórum</a>
+                <a class="nav-link" href="#forum">fórum</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">vagas</a>
+                <a class="nav-link" href="#vagas">vagas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">podcast</a>
+                <a class="nav-link" href="#podcast">podcast</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">artigos</a>
+                <a class="nav-link" href="#artigos">artigos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">canal</a>
+                <a class="nav-link" href="#canal">canal</a>
               </li>
             </ul>
         </div>  
@@ -45,7 +45,7 @@
             <a target="_blank" v-bind:href=post.html_url>
             <div class="row">
               <div class="col-sm-10">
-                <h2 class='github_issue_title'> {{post.title}} </h2>
+                <h2 class='github_issue_title'> {{post.title.slice(0, 75)}} </h2>
                 <span class='github_issue_subtitle'>
                   {{post.user.login}} -- {{ post.created_at | moment("dddd, MMMM Do YYYY") }}
                 </span>
@@ -66,12 +66,12 @@
     <br>
     <div class="row">
       <div class="col-sm-12">
-        <h1 id="forum">Vagas </h1>
+        <h1 id="vagas">Vagas </h1>
           <div class="github_issue_box" v-for="vaga of vagas" v-bind:key="vaga.id">
             <a target="_blank" v-bind:href=vaga.html_url>
             <div class="row">
               <div class="col-sm-10">
-                <h2 class='github_issue_title'> {{vaga.title}} </h2>
+                <h2 class='github_issue_title'> {{vaga.title.slice(0, 75)}} </h2>
                 <span class='github_issue_subtitle'>
                   {{vaga.user.login}} -- {{ vaga.created_at | moment("dddd, MMMM Do YYYY") }}
                 </span>
@@ -95,7 +95,7 @@
   <div class="row">
         <div class="col-sm-12">
           <h1 id="podcast">Nosso Podcast </h1>
-          <div class='subtitle'>
+          <div>
             <h5> Podcast do Agile Testers - Para sugerir temas e participantes, <a href="https://github.com/AgileTesters/forum/issues/19" target="_blank">clique aqui</a></h5>
             <br>
             <iframe src="https://anchor.fm/qansei/embed" height="160px" frameborder="0" scrolling="no" class="podcast_widget"></iframe>
@@ -112,7 +112,7 @@
           <div class='row'>
             <div class="col-sm-12 artigo">
               <h1 id="artigos">Nossos Artigos </h1>
-              <h5 class='subtitle'> Acesse nossa revista <a target="_blank" href="https://medium.com/assertqualityassurance"> AssertQA() </a></h5>
+              <h5> Acesse nossa revista <a target="_blank" href="https://medium.com/assertqualityassurance"> AssertQA() </a></h5>
             </div>
           </div>
         
@@ -144,7 +144,7 @@
                 <label for="member_email">Email*</label>
               </div>
               <div class="col=sm-8">
-                <input name="member[email]" id="member_email" :state="null" placeholder="Obrigatório">
+                <input class="input_mobile" name="member[email]" id="member_email" :state="null" placeholder="Obrigatório">
               </div>
             </div>
             <div class="row">
@@ -152,7 +152,7 @@
                 <label for="member_first_name">Nome</label>
               </div>
               <div class="col=sm-8">
-                <input name="member[first_name]" id="member_first_name" :state="null" placeholder="Não Obrigatório">
+                <input class="input_mobile" name="member[first_name]" id="member_first_name" :state="null" placeholder="Não Obrigatório">
               </div>
             </div>
             <input type="submit" class="btn btn-primary" value="Assinar" name="member[subscribe]" id="member_submit">
@@ -173,7 +173,6 @@
 
       <div class="row">
         <div class='col-sm-12'>
-          <br><br><br>
            <center>
              <h1 id="canal">Nosso Canal no Youtube</h1>
              <iframe class="canal_iframe" src="https://www.youtube.com/embed/videoseries?list=UUhHLl66ov4h2hmL_G3hHi3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
