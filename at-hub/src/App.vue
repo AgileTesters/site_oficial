@@ -9,19 +9,19 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">fórum</a>
+                <a class="nav-link" href="#forum">fórum</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">vagas</a>
+                <a class="nav-link" href="#vagas">vagas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">podcast</a>
+                <a class="nav-link" href="#podcast">podcast</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">artigos</a>
+                <a class="nav-link" href="#artigos">artigos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">canal</a>
+                <a class="nav-link" href="#canal">canal</a>
               </li>
             </ul>
         </div>  
@@ -66,7 +66,7 @@
     <br>
     <div class="row">
       <div class="col-sm-12">
-        <h1 id="forum">Vagas </h1>
+        <h1 id="vagas">Vagas </h1>
           <div class="github_issue_box" v-for="vaga of vagas" v-bind:key="vaga.id">
             <a target="_blank" v-bind:href=vaga.html_url>
             <div class="row">
