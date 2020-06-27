@@ -185,10 +185,9 @@
   </div>
 
   <div class="footer">
-              <a target="_blank" href="https://github.com/AgileTesters/"> <i class="fab fa-github-alt footer_icons"></i> </a> 
-          <a target="_blank" href="https://www.facebook.com/agiletesters"> <i class="fab fa-facebook-square footer_icons"></i> </a>
-          <a target="_blank" href="https://twitter.com/agile_testers/"> <i class="fab fa-twitter-square footer_icons"></i> </a>
-
+    <a target="_blank" href="https://github.com/AgileTesters/"> <i class="fab fa-github-alt footer_icons"></i> </a> 
+    <a target="_blank" href="https://www.facebook.com/agiletesters"> <i class="fab fa-facebook-square footer_icons"></i> </a>
+    <a target="_blank" href="https://twitter.com/agile_testers/"> <i class="fab fa-twitter-square footer_icons"></i> </a>
   </div>
   </div>
 </template>
@@ -202,7 +201,7 @@ export default {
       vagas: {},
       forum: {},
       articles: {},
-      }
+    }
   },
   beforeMount(){
     this.getIssuesAT();
@@ -211,13 +210,15 @@ export default {
   },
   methods: {
     async getIssuesAT(){
-      const res = await fetch('https://api.github.com/repos/agiletesters/forum/issues?page=1');
-      const data = await res.json();
+      const res = await fetch('https://api.github.com/repos/agiletesters/forum/issues?page=1&state=open');
+      let data = await res.json();
+      data = data.filter((issue) => { return issue.pull_request === undefined });
       this.forum = data.slice(0,4);
     },
     async getIssuesVagas(){
-      const res = await fetch('https://api.github.com/repos/qa-brasil/vagas/issues?page=1');
-      const data = await res.json();
+      const res = await fetch('https://api.github.com/repos/qa-brasil/vagas/issues?page=1&state=open');
+      let data = await res.json();
+      data = data.filter((issue) => { return issue.pull_request === undefined });
       this.vagas = data.slice(0,2);
     },
     async getArticlesMedium(){
