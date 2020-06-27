@@ -1,5 +1,5 @@
-.container {
-    margin: inherit !important;
+body{
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -12,7 +12,7 @@
     }
 
     .hero_img{
-        width: 290px;
+        width: 300px;
     }
 
     .issues {
@@ -53,20 +53,21 @@
         white-space: nowrap;
       }    
 
-      .podcast_widget{
-        width: 100%;
+    .podcast_widget{
+        width: 94%;
         height: 120px;
-        padding: 5px
+        padding: 5px;
+        padding-left: 14px;
     }
 
     .article_box {
-        margin: 15px;
+        margin: 10px 0px 0px 10px;
         float: left;
     }
 
     .article_thumbnail{
-        width: 100%;
-        padding: 10px;
+        width: 290px;
+        height: 175px;
       }
 
     .canal_iframe {
@@ -88,16 +89,24 @@
       .placeholder_div{
         display: none;
       }
+
+      .subtitle{
+        margin-left:0px;
+      }
+  
 }
 
 @media (min-width: 601px) {
     .hero_vector {
-        background-image: url('./at_hero_blue.png');
+        background-image: url(./at_hero_blue.png),  linear-gradient(90deg, #2b63bc 13%, #20215a 10%);
         height: 687px;
         padding: 40px 10px 40px 10px;
         background-repeat: no-repeat;
-        background-color: #20215a;
+        background-position: center;      
 
+    }
+    .subtitle{
+      margin-left:13px;
     }
 
     .hero_img{
@@ -114,7 +123,7 @@
     }
 
     .github_issue_box {
-        width: 600px;
+        width: 500px;
         height: 120px;
         margin: 13px;
         float: left;
@@ -135,13 +144,13 @@
       }
 
       .podcast_widget {
-        width: 1024px;
+        width: 94%;
         margin-bottom:20px;
         height: 160px;
       }
 
       .article_box {
-        margin: 38px 38px 0px 38px;
+        margin: 38px 0px 0px 0px;
         float: left;
     }
 
@@ -150,7 +159,7 @@
       }
 
     .article_thumbnail{
-        width: 370px;
+        width: 340px;
         height: 175px;  
     }
 
@@ -170,6 +179,16 @@
       border: 1px solid white;
     }
 
+    .hero_text{
+      padding-top: 300px;
+      padding-left: 10%;
+      width: 40%;
+    }
+
+    .artigo{
+      padding-left: 28px; padding-top: 15px;
+    }
+
 }
 
 .nav-link, .nav-link a, .nav-link a:hover, .nav-link a:visited {
@@ -182,14 +201,7 @@
 }
 
 
-
-
   /* HERO */
-
-.hero_vector {
-    border: solid 0 #000000;
-}
-
 
 .hero_text {
     font-family: Roboto;
@@ -270,6 +282,7 @@
     line-height: normal;
     letter-spacing: normal;
     color: #ed5d3a;
+    padding-left: 30px;
   }
 
   /*  ARTICLES */
