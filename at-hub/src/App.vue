@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="hero_vector">
-      <nav class="navbar navbar-expand-lg" style="padding-left: 5%;">
+      <div class="container">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg" style="padding-left: 5%;">
         <span class="navbar-brand"><img src="@/assets/at_transparente.png" width="200"/></span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <i class="far fa-angle-double-down" style="color: white"></i>
@@ -33,6 +35,8 @@
           </div>
         </div>
         <img class="hero_img" src="@/assets/agile_testers_mari_waldo.png"/>
+        </div>
+      </div>
     </div>
   <div class="container">
     <div class="row">

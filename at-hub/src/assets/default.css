@@ -112,10 +112,12 @@ h1{
 }
 
 @media (min-width: 801px) {
+    .navbar-expand-lg{
+      padding: 10px 5px 4px 0px !important;
+    }
+  
     .hero_vector {
         background-image: url(./at_hero_blue.png),  linear-gradient(90deg, #2b63bc 13%, #20215a 10%);
-        height: 687px;
-        padding: 40px 10px 40px 10px;
         background-repeat: no-repeat;
         background-position: center;      
 
@@ -195,8 +197,8 @@ h1{
     }
 
     .hero_text{
-      padding-top: 300px;
-      padding-left: 10%;
+      padding-top: 200px;
+      padding-bottom: 200px;
       width: 40%;
     }
 
