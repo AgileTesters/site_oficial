@@ -25,6 +25,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="#canal">canal</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#newsletter">newsletter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pergunte">pergunte-me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://agiletesters.com.br/category/1/geral">fórum arquivado</a>
+              </li>
             </ul>
         </div>  
       </nav>
@@ -49,9 +58,14 @@
             <a target="_blank" v-bind:href=post.html_url>
             <div class="row">
               <div class="col-sm-10">
-                <h2 class='github_issue_title'> {{post.title.slice(0, 75)}} </h2>
+                <h2 class='github_issue_title' v-if="post.title.lenght >= 75">
+                    {{post.title.slice(0, 75) + "..."}}
+                  </h2>
+                  <h2 v-else class="github_issue_title">
+                   {{ post.title}}
+                  </h2>
                 <span class='github_issue_subtitle'>
-                  {{post.user.login}} -- {{ post.created_at | moment("dddd, MMMM Do YYYY") }}
+                  {{post.user.login}} -- {{ post.created_at | moment("D [de] MMMM [de] YYYY") }}
                 </span>
               </div>
               <div class="github_arrow_col col-sm-1">
@@ -77,7 +91,7 @@
               <div class="col-sm-10">
                 <h2 class='github_issue_title'> {{vaga.title.slice(0, 75)}} </h2>
                 <span class='github_issue_subtitle'>
-                  {{vaga.user.login}} -- {{ vaga.created_at | moment("dddd, MMMM Do YYYY") }}
+                  {{vaga.user.login}} -- {{ vaga.created_at | moment("D [de] MMMM [de] YYYY")}}
                 </span>
               </div>
               <div class="github_arrow_col col-sm-1">
@@ -136,7 +150,7 @@
   <br><br>
       <div class="row">
         <div class="col-sm-6 newsletter_col">
-          <h2> Esteja sempre atualizado! <i class="fad fa-newspaper"></i></h2>
+          <h2 id='newsletter'> Esteja sempre atualizado! <i class="fad fa-newspaper"></i></h2>
           <form action="https://www.getrevue.co/profile/agile-testers/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
             <div class="row">
               <div class="col-sm-3">
@@ -159,7 +173,7 @@
         </div>
             
         <div class="col-sm-6 newsletter_col">
-            <h2> Pergunte-me qualquer coisa!</h2>
+            <h2 id='pergunte'> Pergunte-me qualquer coisa!</h2>
             
             <br/>
             <a class="btn btn-primary" target="_blank" 

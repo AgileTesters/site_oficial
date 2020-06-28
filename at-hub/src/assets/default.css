@@ -145,7 +145,7 @@ h1{
     }
 
     .navbar-nav{
-        padding-left: 400px !important;
+        padding-left: 130px !important;
     }
 
     .issues {
@@ -155,7 +155,7 @@ h1{
 
     .github_issue_box {
         width: 500px;
-        height: 120px;
+        height: 130px;
         margin: 13px 30px 17px 0px;
         float: left;
         padding-top: 15px;
@@ -317,7 +317,6 @@ h1{
   .base-artigo {
     background-color: #f3f4f5 !important;
     margin-top: 30px;
-    overflow-y: hidden !important;
   }
 
   .article_author {
