@@ -7,6 +7,9 @@ h1{
 }
 
 @media (max-width: 800px) {
+    .navbar-brand{
+      margin: 0px;
+    }
     .hero_vector {
         background-image: linear-gradient(to top, #2a63bc, #010f66);
         padding: 40px 10px 0px 10px;
@@ -14,6 +17,7 @@ h1{
         text-align: center;
     }
     .hero_text {
+        font-size: 25px;
         padding-top: 50px;
         padding-left: 10px;
     }
@@ -107,11 +111,15 @@ h1{
 
       .artigo{
         padding-left: 25px;
-      }
-  
+      }  
 }
 
 @media (min-width: 801px) {
+
+    .padding_zero_bigscreens{
+      padding: 0px !important;
+    }
+
     .navbar-expand-lg{
       padding: 10px 5px 4px 0px !important;
     }
@@ -200,6 +208,7 @@ h1{
       padding-top: 200px;
       padding-bottom: 200px;
       width: 40%;
+      size: 25px;
     }
 
 }
@@ -218,7 +227,6 @@ h1{
 
 .hero_text {
     font-family: Roboto;
-    font-size: 34px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;

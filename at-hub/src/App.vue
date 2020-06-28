@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="hero_vector">
-      <div class="container">
-        <div class="col">
+      <div class="padding_zero_bigscreens container">
+        <div class="padding_zero_bigscreens col">
           <nav class="navbar navbar-expand-lg" style="padding-left: 5%;">
         <span class="navbar-brand"><img src="@/assets/at_transparente.png" width="200"/></span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
