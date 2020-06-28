@@ -2,6 +2,11 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+
+.container{
+  overflow-y: hidden !important;
+}
+
 h1{
   padding-top: 30px;
 }
@@ -15,6 +20,7 @@ h1{
         padding: 40px 10px 0px 10px;
         align-items: center;
         text-align: center;
+        overflow-y: hidden !important;
     }
     .hero_text {
         font-size: 25px;
@@ -311,6 +317,7 @@ h1{
   .base-artigo {
     background-color: #f3f4f5 !important;
     margin-top: 30px;
+    overflow-y: hidden !important;
   }
 
   .article_author {

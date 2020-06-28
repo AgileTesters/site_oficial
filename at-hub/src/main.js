@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
+import moment from 'moment'
 
-Vue.use(require('vue-moment'));
+const lang = 'pt-br'
+moment.locale(lang)
+Vue.use(require('vue-moment'), {moment})
+
 
 Vue.config.productionTip = false
 

@@ -98,47 +98,42 @@
 
   <div class="row">
         <div class="col-sm-12">
-          <h1 id="podcast">Nosso Podcast </h1>
+          <h1 id="podcast">Podcast </h1>
           <div>
-            <h5> Podcast do Agile Testers - Para sugerir temas e participantes, <a href="https://github.com/AgileTesters/forum/issues/19" target="_blank">clique aqui</a></h5>
+            <h5>QAnsei - Podcast do Agile Testers - Para sugerir temas e participantes => <a href="https://github.com/AgileTesters/forum/issues/19" target="_blank">clique aqui</a></h5>
             <br>
             <iframe src="https://anchor.fm/qansei/embed" height="160px" frameborder="0" scrolling="no" class="podcast_widget"></iframe>
           </div>
 
-          <a class="btn btn-success" target="_blank" href="https://open.spotify.com/show/6C86lhNUZ6Pf4nYROy8ciI?si=RRlb_9VdT_eSvOtdXfuTwQ" role="button" style="margin-top: 16px;"><i class="fab fa-spotify"></i> Ouça também no spotify!</a>
+          <center><a class="btn btn-success" target="_blank" href="https://open.spotify.com/show/6C86lhNUZ6Pf4nYROy8ciI?si=RRlb_9VdT_eSvOtdXfuTwQ" role="button" style="margin-top: 16px;"><i class="fab fa-spotify"></i> Ouça também no spotify!</a></center>
         </div>
     </div>
-  </div>
-
-
+  
     <div class="row base-artigo">
-        <div class='container'>
-          <div class='row'>
-            <div class="col-sm-12 artigo">
-              <h1 id="artigos">Nossos Artigos </h1>
+        <div class="col-sm-12">
+              <h1 id="artigos">Artigos </h1>
+          <div>
               <h5> Acesse nossa revista <a target="_blank" href="https://medium.com/assertqualityassurance"> AssertQA() </a></h5>
-            </div>
           </div>
-        
-        <div class="row">
-          <div v-for="article of articles" v-bind:key="article.link">
-            <div class="col">
-              <div class="article_box">
-                  <a target="_blank" v-bind:href=article.link>
-                    <img v-bind:src=article.thumbnail class="article_thumbnail">
-                    <br>
-                    <span class='article_author'>{{article.author}}</span>
-                    <br>
-                    <div class="article_title">{{article.title}}</div>
-                  </a>
-                </div>                  
+          <div class="row">
+            <div v-for="article of articles" v-bind:key="article.link">
+              <div class="col">
+                <div class="article_box">
+                    <a target="_blank" v-bind:href=article.link>
+                      <img v-bind:src=article.thumbnail class="article_thumbnail">
+                      <br>
+                      <span class='article_author'>{{article.author}}</span>
+                      <br>
+                      <div class="article_title">{{article.title}}</div>
+                    </a>
+                  </div>                  
+              </div>
             </div>
-          </div>
+        </div>
         </div>
     </div>
-  </div>
+
   <br><br>
-  <div class="container">
       <div class="row">
         <div class="col-sm-6 newsletter_col">
           <h2> Esteja sempre atualizado! <i class="fad fa-newspaper"></i></h2>
@@ -196,6 +191,7 @@
 </template>
 
 <script>
+require('moment/locale/pt-br')
 export default {  
   name: "App",
   data() {
