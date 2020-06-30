@@ -226,6 +226,10 @@ export default {
       const res = await fetch('https://api.github.com/repos/agiletesters/forum/issues?page=1&state=open');
       let data = await res.json();
       data = data.filter((issue) => { return issue.pull_request === undefined });
+      Object.keys(data).forEach((issue) => {
+        if (data[issue].user.login === 'github-actions[bot]')
+          data[issue].user.login = 'Waldo[bot]'
+      })
       this.forum = data.slice(0,4);
     },
     async getIssuesVagas(){
