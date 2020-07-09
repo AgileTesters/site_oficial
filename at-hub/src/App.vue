@@ -65,7 +65,7 @@
                    {{ post.title}}
                   </h2>
                 <span class='github_issue_subtitle'>
-                  {{post.user.login}} -- {{ post.created_at | moment("D [de] MMMM [de] YYYY") }}
+                  {{post.user.login}} -- {{ post.updated_at | moment("D [de] MMMM [de] YYYY") }}
                 </span>
               </div>
               <div class="github_arrow_col col-sm-1">
@@ -223,7 +223,7 @@ export default {
   },
   methods: {
     async getIssuesAT(){
-      const res = await fetch('https://api.github.com/repos/agiletesters/forum/issues?page=1&state=open');
+      const res = await fetch('https://api.github.com/repos/agiletesters/forum/issues?page=1&state=open&sort=updated');
       let data = await res.json();
       data = data.filter((issue) => { return issue.pull_request === undefined });
       Object.keys(data).forEach((issue) => {
