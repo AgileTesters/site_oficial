@@ -193,7 +193,26 @@
           <br>
         </div>
       </div>
-      <br><br>
+      <div class="row">
+        <div class="col-sm-6 newsletter_col" style="background-color: #fff; height: auto;">
+          <h2 id='eventos'> Stickers e Prints!</h2>
+            <a target="_blank" 
+              href="http://mitystore.iluria.com/agile-testers-ct-2a888b">
+              <img src="@/assets/mity_banner.jpeg" width="500" alt="Banner sobre parceria AT com ilustradora Mity - Loja com Adesivos e Prints"/>
+            </a>
+          
+        </div>
+            
+        <div class="col-sm-6 newsletter_col" style="background-color: #fff; height: auto;">
+            <h2 id='lojinha'> AT APOIA: QA LADIES 2020</h2>
+            
+            <a target="_blank" 
+              href="http://www.qaladies.com/">
+              <img src="@/assets/qaladies.jpeg" width="500" alt="Banner sobre call 4 papers do evento QA Ladies"/>
+            </a>
+
+          </div>
+      </div>
   </div>
 
   <div class="footer">
@@ -228,7 +247,7 @@ export default {
       data = data.filter((issue) => { return issue.pull_request === undefined });
       Object.keys(data).forEach((issue) => {
         if (data[issue].user.login === 'github-actions[bot]')
-          data[issue].user.login = 'Waldo[bot]'
+          data[issue].user.login = 'Mari e Waldo [bot]'
       })
       this.forum = data.slice(0,4);
     },
