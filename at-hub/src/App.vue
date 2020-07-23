@@ -35,7 +35,7 @@
                 <a class="nav-link" target="_blank" href="https://agiletesters.com.br/category/1/geral">fórum arquivado</a>
               </li>
             </ul>
-        </div>  
+        </div>
       </nav>
         <div>
           <div class=hero_text>
@@ -76,7 +76,7 @@
           </div>
       </div>
     <div>
-          <a target="_blank" class="vermais_link" 
+          <a target="_blank" class="vermais_link"
             href="https://github.com/AgileTesters/forum"> Ver mais </a>
     </div>
     </div>
@@ -102,7 +102,7 @@
           </div>
       </div>
           <div>
-          <a target="_blank" class="vermais_link" 
+          <a target="_blank" class="vermais_link"
             href="https://github.com/qa-brasil/vagas"> Ver mais </a>
     </div>
 
@@ -122,7 +122,7 @@
           <center><a class="btn btn-success" target="_blank" href="https://open.spotify.com/show/6C86lhNUZ6Pf4nYROy8ciI?si=RRlb_9VdT_eSvOtdXfuTwQ" role="button" style="margin-top: 16px;"><i class="fab fa-spotify"></i> Ouça também no spotify!</a></center>
         </div>
     </div>
-  
+
     <div class="row base-artigo">
         <div class="col-sm-12">
               <h1 id="artigos">Artigos </h1>
@@ -140,7 +140,7 @@
                       <br>
                       <div class="article_title">{{article.title}}</div>
                     </a>
-                  </div>                  
+                  </div>
               </div>
             </div>
         </div>
@@ -171,18 +171,18 @@
             <input type="submit" class="btn btn-primary" value="Assinar" name="member[subscribe]" id="member_submit">
           </form>
         </div>
-            
+
         <div class="col-sm-6 newsletter_col">
             <h2 id='pergunte'> Pergunte-me qualquer coisa!</h2>
-            
+
             <br/>
-            <a class="btn btn-primary" target="_blank" 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeLMETwSFN-pmVNgL_hbWPmDtLMZR2lXtg9MVAhKS73LVPlaA/viewform" 
+            <a class="btn btn-primary" target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeLMETwSFN-pmVNgL_hbWPmDtLMZR2lXtg9MVAhKS73LVPlaA/viewform"
               role="button"> Faça sua pergunta pra gente!
             </a>
 
           </div>
-      </div> 
+      </div>
 
       <div class="row">
         <div class='col-sm-12'>
@@ -196,17 +196,17 @@
       <div class="row">
         <div class="col-sm-6 newsletter_col" style="background-color: #fff; height: auto;">
           <h2 id='eventos'> Stickers e Prints!</h2>
-            <a target="_blank" 
+            <a target="_blank"
               href="http://mitystore.iluria.com/agile-testers-ct-2a888b">
               <img src="@/assets/mity_banner.jpeg" width="500" alt="Banner sobre parceria AT com ilustradora Mity - Loja com Adesivos e Prints"/>
             </a>
-          
+
         </div>
-            
+
         <div class="col-sm-6 newsletter_col" style="background-color: #fff; height: auto;">
             <h2 id='lojinha'> AT APOIA: QA LADIES 2020</h2>
-            
-            <a target="_blank" 
+
+            <a target="_blank"
               href="http://www.qaladies.com/">
               <img src="@/assets/qaladies.jpeg" width="500" alt="Banner sobre call 4 papers do evento QA Ladies"/>
             </a>
@@ -216,16 +216,25 @@
   </div>
 
   <div class="footer">
-    <a target="_blank" href="https://github.com/AgileTesters/"> <i class="fab fa-github-alt footer_icons"></i> </a> 
-    <a target="_blank" href="https://www.facebook.com/agiletesters"> <i class="fab fa-facebook-square footer_icons"></i> </a>
-    <a target="_blank" href="https://twitter.com/agile_testers/"> <i class="fab fa-twitter-square footer_icons"></i> </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="abre em uma nova aba" href="https://github.com/AgileTesters/">
+      <span class="sr-only">Github</span>
+      <span class="fab fa-github-alt footer_icons"></span>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="abre em uma nova aba" href="https://www.facebook.com/agiletesters">
+      <span class="sr-only">Facebook</span>
+      <span class="fab fa-facebook-square footer_icons"></span>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="abre em uma nova aba" href="https://twitter.com/agile_testers/">
+      <span class="sr-only">Twitter</span>
+      <span class="fab fa-twitter-square footer_icons"></span>
+    </a>
   </div>
   </div>
 </template>
 
 <script>
 require('moment/locale/pt-br')
-export default {  
+export default {
   name: "App",
   data() {
     return {
