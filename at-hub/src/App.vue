@@ -25,22 +25,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="#canal">canal</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#newsletter">newsletter</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pergunte">pergunte-me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://agiletesters.com.br/category/1/geral">fórum arquivado</a>
-              </li>
             </ul>
         </div>
       </nav>
         <div>
           <div class=hero_text>
             <h1 class='hero_title'>print("Hello World")</h1>
-            <span class='hero_sub_title'>A sua comunidade de teste está de cara nova!</span>
+            <span class='hero_sub_title'>o AT está de cara nova!</span>
           </div>
         </div>
         <img class="hero_img" src="@/assets/agile_testers_mari_waldo.png"/>
@@ -149,46 +140,8 @@
 
   <br><br>
       <div class="row">
-        <div class="col-sm-6 newsletter_col">
-          <h2 id='newsletter'> Esteja sempre atualizado! <i class="fad fa-newspaper"></i></h2>
-          <form action="https://www.getrevue.co/profile/agile-testers/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
-            <div class="row">
-              <div class="col-sm-3">
-                <label for="member_email">Email*</label>
-              </div>
-              <div class="col=sm-8">
-                <input class="input_mobile" name="member[email]" id="member_email" :state="null" placeholder="Obrigatório">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-3">
-                <label for="member_first_name">Nome</label>
-              </div>
-              <div class="col=sm-8">
-                <input class="input_mobile" name="member[first_name]" id="member_first_name" :state="null" placeholder="Não Obrigatório">
-              </div>
-            </div>
-            <input type="submit" class="btn btn-primary" value="Assinar" name="member[subscribe]" id="member_submit">
-          </form>
-        </div>
-
-        <div class="col-sm-6 newsletter_col">
-            <h2 id='pergunte'> Pergunte-me qualquer coisa!</h2>
-
-            <br/>
-            <a class="btn btn-primary" target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeLMETwSFN-pmVNgL_hbWPmDtLMZR2lXtg9MVAhKS73LVPlaA/viewform"
-              role="button"> Faça sua pergunta pra gente!
-            </a>
-
-          </div>
-      </div>
-
-      <div class="row">
         <div class='col-sm-12'>
            <center>
-             <h1 id="canal">Nosso Canal no Youtube</h1>
-             <iframe class="canal_iframe" src="https://www.youtube.com/embed/videoseries?list=UUhHLl66ov4h2hmL_G3hHi3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </center>
           <br>
         </div>
@@ -202,18 +155,12 @@
             </a>
 
         </div>
-
         <div class="col-sm-6 newsletter_col" style="background-color: #fff; height: auto;">
-            <h2 id='lojinha'> AT APOIA: QA LADIES 2020</h2>
-
-            <a target="_blank"
-              href="http://www.qaladies.com/">
-              <img src="@/assets/qaladies.jpeg" width="500" alt="Banner sobre call 4 papers do evento QA Ladies"/>
-            </a>
-
-          </div>
+             <h2 id="canal">Nosso Canal no Youtube</h2>
+             <iframe class="canal_iframe" src="https://www.youtube.com/embed/videoseries?list=UUhHLl66ov4h2hmL_G3hHi3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
-  </div>
+    </div>
 
   <div class="footer">
     <a target="_blank" rel="noopener noreferrer" aria-label="abre em uma nova aba" href="https://github.com/AgileTesters/">
